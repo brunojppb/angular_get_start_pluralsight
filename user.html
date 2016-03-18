@@ -8,6 +8,7 @@
   <br />
   <img ng-src="{{user.avatar_url}}" class="img img-rounded img-responsive" style="width: 150px; height: 150px display: block; margin-left: auto; margin-right: auto;" />
   <br>
+
   <h1>Repos</h1>
   <strong>Order:</strong>
   <select ng-model="repoSortOrder" class="form-control">
@@ -30,7 +31,11 @@
     </thead>
     <tbody>
       <tr ng-repeat="repo in repos | orderBy: repoSortOrder">
-        <td>{{repo.name}}</td>
+        <td>
+          <a href="#user/{{username}}/{{repo.name}}">
+            {{repo.name}}
+          </a>
+        </td>
         <td>{{repo.stargazers_count | number}}</td>
         <td>{{repo.language}}</td>
       </tr>
