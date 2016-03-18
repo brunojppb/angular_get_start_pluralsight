@@ -1,0 +1,22 @@
+{
+  "name": "angular_get_start_pluralsight",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "bruno paulino"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/brunojppb/angular_get_start_pluralsight",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.1",
+    "angular-route": "^1.5.1"
+  }
+}

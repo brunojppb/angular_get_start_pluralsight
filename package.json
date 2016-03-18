@@ -1,0 +1,22 @@
+{
+  "name": "angular_get_start_pluralsight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunojppb/angular_get_start_pluralsight.git"
+  },
+  "author": "bruno paulino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunojppb/angular_get_start_pluralsight/issues"
+  },
+  "homepage": "https://github.com/brunojppb/angular_get_start_pluralsight#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
