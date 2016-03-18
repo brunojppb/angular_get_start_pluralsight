@@ -26,6 +26,8 @@
 
   };
 
+  // Register my custom service
+  // to be available in my module
   var module = angular.module('myApp');
   module.factory('github', github);
 }());

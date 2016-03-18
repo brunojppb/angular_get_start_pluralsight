@@ -1,0 +1,9 @@
+<div>
+  <h2>Type in your github username</h2>
+  Countdown to search: <strong>{{ countdown }}</strong>
+  <form name="searchuser" ng-submit="searchGH(githubUser)">
+    <input type="text" required placeholder="type your github username" ng-model="githubUser" class="form-control">
+    <input type="submit" value="search" ng-click="searchGH(githubUser)" class="btn btn-success pull-right" style="margin-top: 20px;">
+  </form>
+
+</div>

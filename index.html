@@ -5,59 +5,27 @@
     <meta charset="utf-8">
     <title>Angular</title>
   </head>
-<body>
 
-  <div ng-controller="HttpController">
-    <h1>$http Service</h1> {{ countdown }}
-    <form name="searchuser" ng-submit="searchGH(githubUser)">
-      <input type="text" required placeholder="type your github username" ng-model="githubUser">
-      <input type="submit" value="search" ng-click="searchGH(githubUser)">
-    </form>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="MainController.js"></script>
+  <script src="UserController.js"></script>
+  <script src="github.js"></script>
 
-    <div ng-show="user" id="user-details">
-      <strong>Github: {{githubUser}}</strong>
-      <br />
-      <strong>Name: {{user.name}}</strong>
-      <br />
-      <strong>Location: {{user.location}}</strong>
-      <br />
-      <img ng-src="{{user.avatar_url}}" style="width: 80px; height: 80px;" />
-      <br> Order:
-      <select ng-model="repoSortOrder">
-        <option value="+name">Name</option>
-        <option value="-stargazers_count">Stars</option>
-      </select>
-      <h1>Repos</h1>
-      <table ng-hide="!user">
-        <thead>
-          <tr>
-            <th>
-              Name
-            </th>
-            <th>
-              Starts
-            </th>
-            <th>
-              Language
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="repo in repos | orderBy: repoSortOrder">
-            <td>{{repo.name}}</td>
-            <td>{{repo.stargazers_count | number}}</td>
-            <td>{{repo.language}}</td>
-          </tr>
-        </tbody>
-      </table>
+  <body>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12" style="text-align: center">
+          <h1>Github Viewer</h1>
+          <div ng-view></div>
+        </div>
+      </div>
     </div>
-  </div>
-</body>
 
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="index.js"></script>
-<script src="github.js"></script>
-
+  </body>
 </html>
